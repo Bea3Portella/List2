@@ -1,0 +1,14 @@
+list = list()
+while True:
+    value = int(input('Digite um valor: '))
+    if value not in list:
+        list.append(value)
+        print('Valor adicionado com sucesso...')
+    else:
+        if value in list:
+            print('Valor duplicado! Não vou adicionar')
+    do_you_continue = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+    if do_you_continue == 'N' or do_you_continue == 'n':
+        break
+print('-='*20)
+print(f'Voce digitou os valores {sorted(list)}')
